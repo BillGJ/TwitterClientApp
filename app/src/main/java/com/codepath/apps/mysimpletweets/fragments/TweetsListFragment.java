@@ -20,7 +20,6 @@ import com.codepath.apps.mysimpletweets.utils.EndlessScrollListener;
 import java.util.ArrayList;
 
 
-
 public class TweetsListFragment extends Fragment{
 
     protected TwitterClient client;
@@ -57,6 +56,7 @@ public class TweetsListFragment extends Fragment{
                     ((MentionsTimelineFragment) TweetsListFragment.this).populateTimeline(oldestId);
 
                 } else if(TweetsListFragment.this instanceof UserTimelineFragment) {
+                 //   Toast.makeText(TweetsListFragment.this,"ok", Toast.LENGTH_SHORT).show();
                     ((UserTimelineFragment) TweetsListFragment.this).populateTimeline(user.getScreenName(), oldestId);
                 }
 
@@ -136,24 +136,8 @@ public class TweetsListFragment extends Fragment{
     // this last one
     public Long getOldestTweetId() {
         // if we want to sort the tweets first
-        /*Collections.sort(tweets, new Comparator<Tweet>(){
-            public int compare(Tweet t1, Tweet t2) {
-                if(t1.getUid() > t2.getUid())
-                    return 1;
-                else if(t1.getUid() < t2.getUid())
-                    return -1;
-                else
-                    return 0;
-            }
-        });*/
 
-        // tweets are already sort by Id in the ArrayList, so the last tweets in the
         return tweets.get(tweets.size()-1).getUid();
     }
 
-    /*@Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        inflater.inflate(R.menu.menu_timeline, menu);
-    }*/
 }

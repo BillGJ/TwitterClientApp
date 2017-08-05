@@ -34,7 +34,7 @@ public class UserTimelineFragment extends TweetsListFragment {
     public static UserTimelineFragment newInstance(User user) {
         UserTimelineFragment fg = new UserTimelineFragment();
         Bundle args = new Bundle();
-        //args.putSerializable("user", user);
+        args.putSerializable("user", user);
         fg.setArguments(args);
 
         return fg;

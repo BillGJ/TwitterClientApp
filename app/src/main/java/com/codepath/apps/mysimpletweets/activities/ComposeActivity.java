@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
-import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
@@ -24,6 +23,7 @@ import com.squareup.picasso.Picasso;
 import org.json.JSONObject;
 
 import cz.msebera.android.httpclient.Header;
+import cz.msebera.android.httpclient.util.TextUtils;
 import jp.wasabeef.picasso.transformations.RoundedCornersTransformation;
 
 public class ComposeActivity extends AppCompatActivity {
@@ -39,6 +39,7 @@ public class ComposeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_compose);
 
 
+
         user = (User) getIntent().getSerializableExtra("user");
         client = TwitterApplication.getRestClient();
 
@@ -47,18 +48,18 @@ public class ComposeActivity extends AppCompatActivity {
     }
 
     //setup the view object value and listener
-    public void setupViews() {
+  public void setupViews() {
         ImageView ivProfileImage = (ImageView) findViewById(R.id.ivProfileImage);
         ivProfileImage.setImageResource(0);
 
         TextView tvUserName = (TextView) findViewById(R.id.tvUserName);
-        TextView tvScreenName = (TextView) findViewById(R.id.tvScreenName);
+        TextView tvScreenName = (TextView) findViewById(R.id.tvTagLine);
         etBody = (EditText) findViewById(R.id.etBody);
         tvRemainingChars = (TextView) findViewById(R.id.tvRemainingChars);
 
         tvUserName.setText(user.getName());
         //add @ to as prefix to screen name
-        tvScreenName.setText(String.format("@%s", user.getScreenName()));
+        tvScreenName.setText("@ "  + user.getScreenName());
 
         String profileImageUrl = user.getProfileImageUrl();
 

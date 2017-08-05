@@ -93,12 +93,14 @@ public class TimelineActivity extends AppCompatActivity {
         // action compose new tweet
         if (id == R.id.action_compose) {
             composeTweet();
+            //Toast.makeText(getApplicationContext(), "Ok", Toast.LENGTH_SHORT).show();
             return true;
         }
 
         //action go to user profile
         if (id == R.id.action_profile) {
             viewUserProfile();
+            return true;
         }
 
         // logout Twitter
@@ -169,6 +171,5 @@ public class TimelineActivity extends AppCompatActivity {
             return tabTitles.length;
         }
     }
-
 
 }

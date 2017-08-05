@@ -33,36 +33,36 @@
             android:layout_marginTop="0dp">
 
             <ImageView
+                android:id="@+id/ivProfileImage"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:id="@+id/ivProfileImage"
-                android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true" />
 
             <TextView
+                android:id="@+id/tvUserName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/tvUserName"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="21dp"
+                android:layout_toEndOf="@+id/ivProfileImage"
                 android:text="@string/username"
-                android:textStyle="bold"
                 android:textColor="#222"
                 android:textSize="15sp"
-                android:layout_alignParentTop="true"
-                android:layout_toRightOf="@+id/ivProfileImage"
-                android:layout_toEndOf="@+id/ivProfileImage"
-                android:layout_marginLeft="10dp" />
+                android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/tvTagLine"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
                 android:text="@string/screen_name"
-                android:id="@+id/tvTagLine"
                 android:textColor="#AAA"
                 android:textSize="15sp"
                 android:layout_below="@+id/tvUserName"
-                android:layout_toRightOf="@+id/ivProfileImage"
-                android:layout_marginLeft="10dp" />
+                android:layout_toEndOf="@+id/ivProfileImage" />
 
             <EditText
                 android:id="@+id/etBody"
@@ -98,10 +98,10 @@
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@string/max_characters"
                 android:layout_alignParentTop="true"
                 android:layout_toEndOf="@+id/tvRemainingChars"
-                android:layout_toRightOf="@+id/tvRemainingChars"
-                android:text="@string/max_characters" />
+                android:layout_marginStart="19dp" />
         </RelativeLayout>
 
         <Button
@@ -115,5 +115,7 @@
             android:text="@string/tweet"
             android:textColor="#fff" />
     </LinearLayout>
+
+
 
 </RelativeLayout>
