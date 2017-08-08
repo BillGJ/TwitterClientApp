@@ -62,6 +62,8 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
+<br/>
+
 <img src='http://i.imgur.com/uLdHZJf.gif' title='Video Walkthrough of My Simple Twitter App' width='' alt='Video Walkthrough' />
 
 

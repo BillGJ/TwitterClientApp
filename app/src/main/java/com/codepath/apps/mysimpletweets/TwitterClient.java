@@ -39,17 +39,6 @@ public class TwitterClient extends OAuthBaseClient {
 	//since_id=1
 
 	//int page|-->
-	/*public void getHomeTimeline(AsyncHttpResponseHandler handler) {
-		String apiUrl = getApiUrl("statuses/home_timeline.json");
-		//Specify the params
-		RequestParams params = new RequestParams();
-		params.put("count", 25);
-		params.put("since_id",25);
-		//Execute requests
-		getClient().get(apiUrl, params, handler);
-	}*/
-
-
 	public void getHomeTimeline(long oldestId, AsyncHttpResponseHandler handler) {
 		String apiUrl = getApiUrl("statuses/home_timeline.json");
 
@@ -69,8 +58,6 @@ public class TwitterClient extends OAuthBaseClient {
 		getClient().get(apiUrl, params, handler);
 
 	}
-
-
 
 	// UserInfo - get information of the authenticated user
 	// GET account/verify_credentials.json
