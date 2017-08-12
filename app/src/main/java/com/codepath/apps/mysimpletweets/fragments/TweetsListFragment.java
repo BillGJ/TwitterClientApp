@@ -23,12 +23,10 @@ import java.util.ArrayList;
 public class TweetsListFragment extends Fragment{
 
     protected TwitterClient client;
-
     private ArrayList<Tweet> tweets;
     private TweetsArrayAdapter aTweets;
     private ListView lvTweets;
     protected User user;
-
     protected SwipeRefreshLayout swipeContainer;
 
     // inflation logic
@@ -48,7 +46,7 @@ public class TweetsListFragment extends Fragment{
                 // find the oldest tweet id
                 long oldestId = getOldestTweetId();
 
-                // pocpulate timeline with tweets before the tweet with the oldest Id
+                // populate timeline with tweets before the tweet with the oldest Id
                 if(TweetsListFragment.this instanceof HomeTimelineFragment) {
                     ((HomeTimelineFragment) TweetsListFragment.this).populateTimeline(oldestId);
 
@@ -68,11 +66,11 @@ public class TweetsListFragment extends Fragment{
         // Lookup the Swipe Container view//
         swipeContainer = (SwipeRefreshLayout) v.findViewById(R.id.swipeContainer);
 
-        //Listen for Swipe Refresh to fetch Moives again
+        //Listen for Swipe Refresh to fetch Movies again
         swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                // Make sure to call swipeContainer.setRefreshing(fasle) once the
+                // Make sure to call swipeContainer.setRefreshing(false) once the
                 // network has completed successfully
                 //clear list before refreshing
 

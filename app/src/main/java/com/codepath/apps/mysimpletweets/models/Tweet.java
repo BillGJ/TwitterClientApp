@@ -11,37 +11,9 @@ import java.util.ArrayList;
  * Created by Ebillson GJ on 8/3/2017.
  */
 
-
-
-/*
-* [
-  {
-    "coordinates": null,
-    "truncated": false,
-    "created_at": "Tue Aug 28 21:16:23 +0000 2012",
-    "favorited": false,
-    "id_str": "240558470661799936",
-    "in_reply_to_user_id_str": null,
-    "entities": {
-      "urls": [
-
-      ],
-      "hashtags": [
-
-      ],
-*
-* {
-*
-* .....
-*
-* }
-*
-*
-*
-* */
-
-
 //Parse the Json + Store the Data, Encapsulate state logic or display logic
+
+
 public class Tweet implements Serializable {
 
     //List out the attributes
