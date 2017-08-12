@@ -37,7 +37,7 @@ Here's a walkthrough of implemented user stories:
 
 <br/>
 
-<img src='http://i.imgur.com/uLdHZJf.gif' title='Video Walkthrough of My Simple Twitter App' width='' alt='Video Walkthrough' />
+<img src='https://github.com/BillGJ/TwitterClientApp/blob/master/SimpleTwitterAppDemo.gif' title='Video Walkthrough of My Simple Twitter App' width='' alt='Video Walkthrough' />
 
 
 
